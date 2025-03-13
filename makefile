@@ -9,8 +9,8 @@ release:
 
 	git tag $(NEW_VERSION)
 	git commit -m "Prepare for release $(NEW_VERSION)"
-	git push origin $(NEW_VERSION)
 	git push origin main
+	git push origin $(NEW_VERSION)
 
 update_pyproject:
 	python3 mky_utils/update_dependencies.py
